@@ -67,7 +67,7 @@
     padding: 10px;
   }
 
-  h3:hover{
+  img,h3:hover{
     background-color: rgb(236, 98, 193);
     cursor: pointer;
   }
