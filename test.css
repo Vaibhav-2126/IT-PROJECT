@@ -67,9 +67,12 @@
     padding: 10px;
   }
 
-  h3:hover{
-    background-color: rgb(236, 98, 193);
+  img,h3:hover{
+    background-color: #56629b;
     cursor: pointer;
+  }
+  img:hover{
+    transform: scale(0.9);
   }
  
 
