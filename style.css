@@ -62,6 +62,7 @@ nav a {
     font-size: large;
     font-style: oblique;
     font-weight: bolder;
+    width: 10%;
 }
 
 nav a:hover {
