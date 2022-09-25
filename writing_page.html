@@ -6,11 +6,100 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let words do the talking</title>
+    <style>
+        .hd {
+            display: inline-block;
+            width: 100%;
+        }
+
+        h1 {
+            display: inline;
+            margin-left: 620px;
+        }
+
+        body {
+            background-color: black;
+            color: aliceblue;
+            font-family: Garamond;
+        }
+
+        textarea {
+            background-color: black;
+            color: aliceblue;
+            border-style: none;
+            outline: none;
+            font-size: 50px;
+            font-family: Garamond;
+            resize: none;
+        }
+
+        #txtbox {
+            box-sizing: border-box;
+            margin: 50px;
+            margin-top: 5px;
+            padding: 25px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        #content {
+            font-size: 25px;
+            height: 500px;
+            width: 100%;
+        }
+
+        #publish {
+            color: aliceblue;
+            height: 40px;
+            width: 90px;
+            background-color: green;
+            border-radius: 7px;
+            float: right;
+        }
+
+        .icons {
+            height: 20px;
+            width: 20px;
+            margin-right: 10px;
+        }
+
+        #edit-box {
+            box-sizing: border-box;
+            margin: 50px;
+            padding: 10px;
+            padding-left: 30px;
+            margin-top: 20px;
+            margin-bottom: 0px;
+            width: 80%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    </style>
 </head>
 
 <body>
-    <h1>YOUR WORDS</h1>
-    <p>hello changed by Rahul</p>
+    <div class="hd">
+        <h1>Let your words talk</h1>
+        <button id="publish">Publish</button>
+    </div>
+    <div id="edit-box">
+        <img class="icons" src="icons/images.png">
+        <img class="icons" src="icons/redo-2-128.png" style="margin-right: 30px;">
+        <img class="icons" src="icons/text-bold-128.png">
+        <img class="icons" src="icons/letter-i-128.png">
+        <img class="icons" src="icons/letter-u-128.png" style="margin-right: 30px;">
+        <img class="icons" src="icons/copy-128.png">
+        <img class="icons" src="icons/cut-128.png">
+        <img class="icons" src="icons/clipboard-5-128.png" style="margin-right: 30px;">
+        <img class="icons" src="icons/save-128.png">
+        <img class="icons" src="icons/delete-128.png">
+
+    </div>
+    <div id="txtbox">
+        <textarea id="title" placeholder="Title.."></textarea><br><br>
+        <textarea id="content" placeholder="Start Writing.."></textarea>
+    </div>
 </body>
 
 </html>
