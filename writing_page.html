@@ -7,6 +7,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Let words do the talking</title>
     <style>
+        #mySidenav a {
+            position: absolute;
+            left: -100px;
+            transition: 0.3s;
+            padding: 15px;
+            width: 120px;
+            text-decoration: none;
+            font-size: 20px;
+            color: white;
+            border-radius: 0 5px 5px 0;
+        }
+
+        #mySidenav a:hover {
+            left: 0;
+        }
+
+        #read {
+            top: 60px;
+            background-color: #04AA6D;
+        }
+
+        #draft {
+            top: 120px;
+            background-color: #2196F3;
+        }
+
+        #setting {
+            top: 180px;
+            background-color: #f44336;
+        }
+
+        #logout {
+            top: 240px;
+            background-color: #555
+        }
+
         .hd {
             display: inline-block;
             width: 100%;
@@ -81,7 +117,7 @@
 <body>
     <div class="hd">
         <h1>Let your words talk</h1>
-        <button id="publish">Publish</button>
+        <button id="publish" onclick="publish()">Publish</button>
     </div>
     <div id="edit-box">
         <img class="icons" src="icons/images.png">
@@ -100,6 +136,21 @@
         <textarea id="title" placeholder="Title.."></textarea><br><br>
         <textarea id="content" placeholder="Start Writing.."></textarea>
     </div>
+    <div id="mySidenav" class="sidenav">
+        <a href="#" id="read">Home<img class="icons" src="icons/house-128.png"
+                style="margin-left: 50px; margin-right:0px"></a>
+        <a href="#" id="draft">Explore<img class="icons" src="icons/book-2-128.png"
+                style="margin-left: 36px; margin-right:0px"></a>
+        <a href="#" id="setting">Settings<img class="icons" src="icons/settings-6-128.png"
+                style="margin-left: 37px; margin-right:0px"></a>
+        <a href="#" id="logout">Logout<img class="icons" src="icons/logout-128.png"
+                style="margin-left: 40px; margin-right:0px"></a>
+    </div>
+    <script>
+        function publish() {
+            alert("Are you sure?");
+        }
+    </script>
 </body>
 
 </html>
