@@ -44,13 +44,9 @@
         }
 
         .hd {
-            display: inline-block;
-            width: 100%;
-        }
-
-        h1 {
-            display: inline;
-            margin-left: 620px;
+            text-align: center;
+            font-size: 40px;
+            font-family: Garamond;
         }
 
         body {
@@ -116,20 +112,20 @@
 
 <body>
     <div class="hd">
-        <h1>Let your words talk</h1>
+        Let your words talk
         <button id="publish" onclick="publish()">Publish</button>
     </div>
     <div id="edit-box">
-        <img class="icons" src="icons/images.png">
-        <img class="icons" src="icons/redo-2-128.png" style="margin-right: 30px;">
-        <img class="icons" src="icons/text-bold-128.png">
-        <img class="icons" src="icons/letter-i-128.png">
-        <img class="icons" src="icons/letter-u-128.png" style="margin-right: 30px;">
-        <img class="icons" src="icons/copy-128.png">
-        <img class="icons" src="icons/cut-128.png">
-        <img class="icons" src="icons/clipboard-5-128.png" style="margin-right: 30px;">
-        <img class="icons" src="icons/save-128.png">
-        <img class="icons" src="icons/delete-128.png">
+        <img class="icons" id="undo" src="icons/images.png" alt="Undo">
+        <img class="icons" id="redo" src="icons/redo-2-128.png" style="margin-right: 30px;">
+        <img class="icons" id="bold" src="icons/text-bold-128.png">
+        <img class="icons" id="italics" src="icons/letter-i-128.png">
+        <img class="icons" id="underline" src="icons/letter-u-128.png" style="margin-right: 30px;">
+        <img class="icons" id="copy" src="icons/copy-128.png">
+        <img class="icons" id="cut" src="icons/cut-128.png">
+        <img class="icons" id="paste" src="icons/clipboard-5-128.png" style="margin-right: 30px;">
+        <img class="icons" id="save" src="icons/save-128.png">
+        <img class="icons" id="delete" src="icons/delete-128.png">
 
     </div>
     <div id="txtbox">
@@ -137,19 +133,22 @@
         <textarea id="content" placeholder="Start Writing.."></textarea>
     </div>
     <div id="mySidenav" class="sidenav">
-        <a href="#" id="read">Home<img class="icons" src="icons/house-128.png"
+        <a href="index.htm" id="read">Home<img class="icons" src="icons/house-128.png"
                 style="margin-left: 50px; margin-right:0px"></a>
         <a href="#" id="draft">Explore<img class="icons" src="icons/book-2-128.png"
                 style="margin-left: 36px; margin-right:0px"></a>
         <a href="#" id="setting">Settings<img class="icons" src="icons/settings-6-128.png"
                 style="margin-left: 37px; margin-right:0px"></a>
-        <a href="#" id="logout">Logout<img class="icons" src="icons/logout-128.png"
+        <a href="login.html" id="logout">Logout<img class="icons" src="icons/logout-128.png"
                 style="margin-left: 40px; margin-right:0px"></a>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
+        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="></script>
     <script>
         function publish() {
             alert("Are you sure??");
         }
+        $
     </script>
 </body>
 
