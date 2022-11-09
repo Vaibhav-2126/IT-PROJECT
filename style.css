@@ -66,10 +66,10 @@ nav a {
     width: 10%;
 }
 
-nav a:hover {
+/* nav a:hover {
     transform: scale(0.70);
     transition-timing-function: ease-in-out;
-}
+} */
 
 #search {
     line-height: 30px;

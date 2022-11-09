@@ -8,24 +8,17 @@
 .section{
 	width: 100%;
 	min-height: 100vh;
-	background-color: rgba(73, 113, 233, 0.914);
+	background-color: #ADD8E6;
     animation-name: BgColors;
     animation-duration: 4s;
 }
-@keyframes BgColors {
-    0%   {background-color: rgb(205, 235, 107);}
-    25%  {background-color: rgb(214, 246, 72);}
-    50%  {background-color: rgb(248, 73, 88);}
-    100% {background-color: rgb(124, 246, 124);}
-  }
-
-
+/* 
 .container{
 	width: 80%;
 	display: block;
 	margin:auto;
 	padding-top: 100px;
-}
+} */
 .content-section{
 	float: left;
 	width: 55%;
