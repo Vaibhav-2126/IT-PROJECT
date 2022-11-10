@@ -87,7 +87,7 @@
          <input type="password" name="password">
          <div>
             <button type="submit" class="login">Log in</button>
-            <button type="cancel" class="cancel">Cancel</button>
+            <button type="button" class='cancel' onclick="location.href='./index.htm';">Cancel</button>
          </div>
       </div>
       <p id="p1"> &#127799 Words are a lens to focus one’s mind. &#127799</p>
@@ -115,10 +115,10 @@
    // // Initialize Firebase
    // const app = initializeApp(firebaseConfig);
    // const analytics = getAnalytics(app);
-               
+
    var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;
 
-   function validate() { 
+   function validate() {
 
       var email =
          document.forms.RegForm.email.value;
