@@ -107,18 +107,26 @@
             margin-left: auto;
             margin-right: auto;
         }
+
+        .bold {
+            font-weight: bold;
+        }
     </style>
 </head>
 
 <body>
     <div class="hd">
         Let your words talk
-        <button id="publish" onclick="publish()">Publish</button>
+        <button id="publish">Publish</button>
     </div>
-    <div id="edit-box">
+    <br>
+    <br>
+    <br>
+    <br>
+    <!-- <div id="edit-box">
         <img class="icons" id="undo" src="icons/images.png" alt="Undo">
         <img class="icons" id="redo" src="icons/redo-2-128.png" style="margin-right: 30px;">
-        <img class="icons" id="bold" src="icons/text-bold-128.png">
+        <img class="icons" id="boldbtn" src="icons/text-bold-128.png">
         <img class="icons" id="italics" src="icons/letter-i-128.png">
         <img class="icons" id="underline" src="icons/letter-u-128.png" style="margin-right: 30px;">
         <img class="icons" id="copy" src="icons/copy-128.png">
@@ -126,8 +134,7 @@
         <img class="icons" id="paste" src="icons/clipboard-5-128.png" style="margin-right: 30px;">
         <img class="icons" id="save" src="icons/save-128.png">
         <img class="icons" id="delete" src="icons/delete-128.png">
-
-    </div>
+    </div> -->
     <div id="txtbox">
         <textarea id="title" placeholder="Title.."></textarea><br><br>
         <textarea id="content" placeholder="Start Writing.."></textarea>
@@ -142,13 +149,29 @@
         <a href="login.html" id="logout">Logout<img class="icons" src="icons/logout-128.png"
                 style="margin-left: 40px; margin-right:0px"></a>
     </div>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.1/jquery.min.js"
-        integrity="sha512-aVKKRRi/Q/YV+4mjoKBsE4x3H+BkegoM/em46NNlCqNTmUYADjBbeNefNxYV7giUp0VxICtqdrbqU7iVaeZNXA=="></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         function publish() {
-            alert("Are you sure??");
+            const fs = require('fs');
+            var tt = document.getElementById("title").value;
+            var con = document.getElementById("content").value;
+            const article = {
+                author: "Vaibhav Goel",
+                title: tt,
+                content: con
+            };
+            const jsonString = JSON.stringify(article);
+            fs.writeFile('article_db.json', jsonString, err => {
+                if (err) {
+                    console.log('Error writing file', err)
+                } else {
+                    console.log('Successfully wrote file')
+                }
+            })
         }
-        $
+        $("#publish").click(function () {
+            publish();
+        });
     </script>
 </body>
 
