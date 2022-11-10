@@ -1,80 +1,114 @@
 <!DOCTYPE html>
 
 <head>
-    <title>Read away</title>
-    <style>
-        #mySidenav a {
-            position: absolute;
-            left: -100px;
-            transition: 0.3s;
-            padding: 15px;
-            width: 120px;
-            text-decoration: none;
-            font-size: 20px;
-            color: white;
-            border-radius: 0 5px 5px 0;
-        }
 
-        #mySidenav a:hover {
-            left: 0;
-        }
-
-        #read {
-            top: 60px;
-            background-color: #04AA6D;
-        }
-
-        #draft {
-            top: 120px;
-            background-color: #2196F3;
-        }
-
-        #setting {
-            top: 180px;
-            background-color: #f44336;
-        }
-
-        #logout {
-            top: 240px;
-            background-color: #555
-        }
-
-        .icons {
-            height: 20px;
-            width: 20px;
-            margin-right: 10px;
-        }
-
-        #heading {
-            display: inline-block;
-            margin-left: 620px;
-
-        }
-
-        #para {
-            display: block;
-            margin-right: ;
-        }
-    </style>
 </head>
+<style>
+    .navbar {
+        overflow: hidden;
+        background-color: #333;
+        font-family: Arial;
+    }
+
+
+    .navbar a {
+        float: left;
+        font-size: 16px;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+
+    .dropdown {
+        float: left;
+        overflow: hidden;
+    }
+
+
+    .dropdown .dropbtn {
+        font-size: 16px;
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit;
+        margin: 0;
+    }
+
+
+    .navbar a:hover,
+    .dropdown:hover .dropbtn {
+        background-color: red;
+    }
+
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+
+
+    .dropdown-content a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+
+
+    .dropdown-content a:hover {
+        background-color: #ddd;
+    }
+
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+</style>
+
+<script>"https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js" ></script>
+<script type="text/javascript" src="articles.json"></script>
+<script type="text/javascript" src="rp.js"></script>
+
+
+
+<div class="navbar">
+    <a href="./index.htm">Home</a>
+
+    <div class="dropdown">
+        <button class="dropbtn">More
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+            <a href="./writing_page.html">Writing Page</a>
+            <a href="./login.html">Login/Signup</a>
+            <a href="./test.html">Search</a>
+        </div>
+    </div>
+</div>
 
 <body>
-    <div id="heading">
-        <h1>Title of article</h1>
+
+    <div id="Title" style="text-align: center;">
+        <H1> Read All you Can!!</H1>
     </div>
-    <div id="para">
-        <p>article body</p>
+    <div id="Content" style="background-color: lightgray;
+    border: 300px black;
+    padding: 50px;
+    margin: 20px;">
+        Fetch article from database
     </div>
-    <div id="mySidenav" class="sidenav">
-        <a href="#" id="read">Home<img class="icons" src="icons/house-128.png"
-                style="margin-left: 50px; margin-right:0px"></a>
-        <a href="#" id="draft">Explore<img class="icons" src="icons/book-2-128.png"
-                style="margin-left: 36px; margin-right:0px"></a>
-        <a href="#" id="setting">Settings<img class="icons" src="icons/settings-6-128.png"
-                style="margin-left: 37px; margin-right:0px"></a>
-        <a href="#" id="logout">Logout<img class="icons" src="icons/logout-128.png"
-                style="margin-left: 40px; margin-right:0px"></a>
-    </div>
+
+
 </body>
 
 </html>
