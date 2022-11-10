@@ -6,6 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SIGN UP</title>
+
+   <!-- <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;600&display=swap" rel="stylesheet" /> -->
+
     <style>
         body {
             background-color: rgb(186, 149, 232);
@@ -78,7 +81,7 @@
 </head>
 
 <body>
-    <form name="RegForm" onsubmit="return validate()" method="post">>
+    <form name="RegForm" onsubmit="return validate()" method="post" action="#" id="myForm">>
         <div id="error">
             <h1 id="h1">Fill The Folowing Details.</h1>
             <hr>
@@ -96,8 +99,8 @@
                 I agree with all terms and conditions.
             </p>
             <div>
-                <button type="submit" class="signup" value="send" name="Submit">Sign Up</button>
-                <button type="button" id="cancel" class='cancel' onclick="location.href='./index.htm';">Cancel</button>
+                <button type="submit" class="signup" value="send" name="submit" id="submit">Sign Up</button>
+                <button type="button" id="cancel" class='cancel'>Cancel</button>
             </div>
         </div>
     </form>
@@ -144,19 +147,28 @@
                 return false;
 
             }
-            else {
-                alert("SUBMITTED")
-                window.location.href = "https://www.geeksforgeeks.org/";
-            }
 
         }
 
-        // function cancel() {
-        //     //go to homepage using
-        //     alert("CANCEL")
-        //     window.location.href = "http://127.0.0.1:5500/index.htm#";
-        //     // return true;
-        // }
+        
+        let datas = [];
+        const addData = (ev)=>{
+            ev.preventDefault();  //to stop the form submitting
+            let data = {
+                name: document.getElementById('name').value,
+                email: document.getElementById('email').value,
+                password: document.getElementById('password').value
+            }
+            datas.push(data);
+            document.forms[0].reset(); 
+            console.warn('added' , {datas} );
+
+            //saving to localStorage
+            localStorage.setItem('MyInfo', JSON.stringify(datas) );
+        }
+        document.addEventListener('DOMContentLoaded', ()=>{
+            document.getElementById('submit').addEventListener('click', addData);
+        });
 
 
     </script>
