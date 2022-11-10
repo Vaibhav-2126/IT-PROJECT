@@ -152,7 +152,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
     <script>
         function publish() {
-            const fs = require('fs');
             var tt = document.getElementById("title").value;
             var con = document.getElementById("content").value;
             const article = {
@@ -161,13 +160,8 @@
                 content: con
             };
             const jsonString = JSON.stringify(article);
-            fs.writeFile('article_db.json', jsonString, err => {
-                if (err) {
-                    console.log('Error writing file', err)
-                } else {
-                    console.log('Successfully wrote file')
-                }
-            })
+            console.log(jsonString);
+
         }
         $("#publish").click(function () {
             publish();
