@@ -84,11 +84,11 @@
             <hr>
             <hr>
             <label for="name"><b>Enter Your Name:</b></label>
-            <input type="text" id='name' placeholder="Enter name" name="Name" >
+            <input type="text" id='name' placeholder="Enter name" name="Name">
             <label for="email"><b>Enter Your Email ID:</b></label>
-            <input type="text" id='email' placeholder="Enter email" name="EMail" >
+            <input type="text" id='email' placeholder="Enter email" name="EMail">
             <label for="password"><b>Create password:</b></label>
-            <input type="password" id='password' placeholder="Create password" name="Password" >
+            <input type="password" id='password' placeholder="Create password" name="Password">
             <label>
                 <input type="checkbox" checked="checked" name="remember">Remember
             </label>
@@ -97,7 +97,7 @@
             </p>
             <div>
                 <button type="submit" class="signup" value="send" name="Submit">Sign Up</button>
-                <button type="button" id="cancel" class='cancel'>Cancel</button>
+                <button type="button" id="cancel" class='cancel' onclick="location.href='./index.htm';">Cancel</button>
             </div>
         </div>
     </form>
@@ -110,51 +110,53 @@
         var regName = /\d+$/g;
 
         function validate() {
-        var name =
-            document.forms.RegForm.Name.value;
-        var email =
-            document.forms.RegForm.EMail.value;
-        var password =
-            document.forms.RegForm.Password.value;
+            var name =
+                document.forms.RegForm.Name.value;
+            var email =
+                document.forms.RegForm.EMail.value;
+            var password =
+                document.forms.RegForm.Password.value;
 
-        var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
-        var regName = /\d+$/g;                                    // Javascript reGex for Name validation
+            var regEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/g;  //Javascript reGex for Email Validation.
+            var regName = /\d+$/g;                                    // Javascript reGex for Name validation
 
-        if (name == "" || regName.test(name)) {
-            window.alert("Please enter your name properly.");
-            name.focus();
-            return false;
+            if (name == "" || regName.test(name)) {
+                window.alert("Please enter your name properly.");
+                name.focus();
+                return false;
+            }
+
+            if (email == "" || !regEmail.test(email)) {
+                window.alert("Please enter a valid e-mail address.");
+                email.focus();
+                return false;
+            }
+
+            if (password == "") {
+                alert("Please enter your password");
+                password.focus();
+                return false;
+            }
+
+            if (password.length < 6) {
+                alert("Password should be atleast 6 character long");
+                password.focus();
+                return false;
+
+            }
+            else {
+                alert("SUBMITTED")
+                window.location.href = "https://www.geeksforgeeks.org/";
+            }
+
         }
 
-        if (email == "" || !regEmail.test(email)) {
-            window.alert("Please enter a valid e-mail address.");
-            email.focus();
-            return false;
-        }
-
-        if (password == "") {
-            alert("Please enter your password");
-            password.focus();
-            return false;
-        }
-
-        if (password.length < 6) {
-            alert("Password should be atleast 6 character long");
-            password.focus();
-            return false;
-
-        }
-        else{
-            alert("SUBMITTED")
-            window.location.href="https://www.geeksforgeeks.org/";
-        }
-
-    }
-
-    function cancel(){
-        
-        return true;
-    }
+        // function cancel() {
+        //     //go to homepage using
+        //     alert("CANCEL")
+        //     window.location.href = "http://127.0.0.1:5500/index.htm#";
+        //     // return true;
+        // }
 
 
     </script>
